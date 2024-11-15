@@ -1,5 +1,4 @@
 
-```markdown
 # Node.js Authentication System with Account Locking and Admin Role
 
 This project is a Node.js application implementing user authentication using JWT, with features like account locking after multiple failed login attempts, and an admin role for manually unlocking accounts.
@@ -158,14 +157,5 @@ npm test
 └── server.js
 ```
 
-## Rate Limiting
-The project uses `express-rate-limit` to prevent brute-force login attacks. The rate limit is set to allow a maximum of 5 login attempts per IP address every 15 minutes.
 
-## Contribution
-Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue to discuss changes.
 
-## License
-This project is licensed under the MIT License.
-```
-
-Copy this content into a `README.md` file in your project directory. It should provide clear and complete instructions for users to set up and run your project.
