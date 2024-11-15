@@ -18,9 +18,11 @@ const sendTokenAsCookie = (res, token) => {
 };
 
 // Email validation regex pattern
+//(it should have style name@domain.extention)
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Password validation regex pattern
+// Password validation regex pattern 
+//(1 small letter, 1 capital letter, 1 number, 1 special charecter, min length 8)
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
