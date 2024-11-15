@@ -39,22 +39,22 @@ This project is a Node.js application implementing user authentication using JWT
   Create a .env file in the root directory and set up the environment variables as shown in the .env.example file:
 
 # .env file
-  MONGO_URI=your_mongodb_uri
+    MONGO_URI=your_mongodb_uri
+    
+    JWT_SECRET=your_jwt_secret_key
+    
+    JWT_EXPIRES_IN=1d
+    
+    NODE_ENV=development
+    
+    PORT=5000
   
-  JWT_SECRET=your_jwt_secret_key
-  
-  JWT_EXPIRES_IN=1d
-  
-  NODE_ENV=development
-  
-  PORT=5000
-  
-    Environment Variables Explanation:
-      MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).
-      JWT_SECRET: Secret key for signing JWT tokens. It should be a random and secure string.
-      JWT_EXPIRES_IN: Duration for which the JWT token is valid (e.g., 1d for 1 day).
-      NODE_ENV: Set to development for local development and production when deploying to production.
-      PORT: The port on which the server will run (default is 5000).
+  Environment Variables Explanation:
+    MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).
+    JWT_SECRET: Secret key for signing JWT tokens. It should be a random and secure string.
+    JWT_EXPIRES_IN: Duration for which the JWT token is valid (e.g., 1d for 1 day).
+    NODE_ENV: Set to development for local development and production when deploying to production.
+    PORT: The port on which the server will run (default is 5000).
 
 4. Run the Application
 You can start the application using the following command:
