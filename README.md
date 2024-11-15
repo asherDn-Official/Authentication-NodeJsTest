@@ -1,4 +1,4 @@
-Node.js Authentication System with Account Locking and Admin Role
+# Node.js Authentication System with Account Locking and Admin Role
 This project is a Node.js application implementing user authentication using JWT, with features like account locking after multiple failed login attempts, and an admin role for manually unlocking accounts.
 
 Features
