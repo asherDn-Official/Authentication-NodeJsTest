@@ -91,6 +91,8 @@ The server will start on http://localhost:5000.
 
 5. API Endpoints
 
+
+
   1. User Registration
 
   URL: POST /api/register
@@ -114,7 +116,7 @@ The server will start on http://localhost:5000.
 
   422: Invalid email format or password not strong enough
 
-  3. User Login
+  2. User Login
 
   URL: POST /api/login
 
@@ -153,7 +155,7 @@ The server will start on http://localhost:5000.
 
   403: Account is locked
 
-5. Admin Unlock User Account
+  5. Admin Unlock User Account
 
   URL: PATCH /api/admin/unlock/:userId
 
