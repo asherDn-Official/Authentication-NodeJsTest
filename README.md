@@ -129,33 +129,14 @@ npm run dev
   - Create a cluster and get the connection string.
   - Replace `MONGO_URI` in your `.env` file with your MongoDB Atlas URI.
 
-## Running Tests (Optional)
+## Running Code
 If you've written tests for your application, you can run them with:
 
 ```bash
-npm test
+npm start
 ```
 
-## Project Structure
-```bash
-├── controllers
-│   └── authController.js
-├── middleware
-│   ├── protect.js
-│   └── rateLimit.js
-├── models
-│   └── userModel.js
-├── routes
-│   └── authRoutes.js
-├── utils
-│   └── validators.js
-├── .env
-├── .env.example
-├── .gitignore
-├── README.md
-├── package.json
-└── server.js
-```
+
 
 
 
