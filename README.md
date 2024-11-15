@@ -18,7 +18,6 @@ This project is a Node.js application implementing user authentication using JWT
 - **Database**: MongoDB (with Mongoose)
 - **Security**: bcryptjs, jsonwebtoken
 - **Middleware**: cookie-parser, express-rate-limit
-- **Validation**: validator
 
 ## Prerequisites
 - **Node.js** (v14 or higher)
