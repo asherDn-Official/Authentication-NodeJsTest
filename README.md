@@ -110,8 +110,14 @@ npm start
    - **403**: Account is locked
 
 ### 4. Admin Unlock User Account
-- **URL**: `PATCH /api/admin/unlock/:userId`
+- **URL**: `PATCH /api/admin/unlock`
 - **Description**: Admins can manually unlock a locked user account.
+- **Request Body**:
+   ```json
+   {
+     "email": "john@example.com",
+   }
+   ```
 - **Response**:
    - **200**: Account unlocked successfully
    - **404**: User not found
