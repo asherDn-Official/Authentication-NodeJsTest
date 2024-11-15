@@ -49,8 +49,8 @@ This project is a Node.js application implementing user authentication using JWT
     
     PORT=5000
   
-  Environment Variables Explanation:
-    MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).
+  Environment Variables Explanation:\n
+    MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).\n
     JWT_SECRET: Secret key for signing JWT tokens. It should be a random and secure string.
     JWT_EXPIRES_IN: Duration for which the JWT token is valid (e.g., 1d for 1 day).
     NODE_ENV: Set to development for local development and production when deploying to production.
