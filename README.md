@@ -59,54 +59,53 @@ This project is a Node.js application implementing user authentication using JWT
 4. Run the Application
 You can start the application using the following command:
 
-
-
-npm start
+        npm start
 Or, if you want to run it in development mode with hot reloading (requires nodemon):
 
-
-npm run dev
+        npm run dev
 The server will start on http://localhost:5000.
-5. API Endpoints
-1. User Registration
-URL: POST /api/register
-Description: Registers a new user.
-Request Body:
-json:
 
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "Password@123"
-}
-Response:
-201: User registered successfully
-400: Email already in use
-422: Invalid email format or password not strong enough
-2. User Login
-URL: POST /api/login
-Description: Logs in a registered user. Returns a cookie with a JWT token.
-Request Body:
-json
-Copy code
-{
-  "email": "john@example.com",
-  "password": "Password@123"
-}
-Response:
-200: Login successful
-400: Invalid credentials
-403: Account is locked, try again later
-3. Get User Profile (Protected)
-URL: GET /api/profile
-Description: Returns the profile information of the logged-in user.
-Headers:
-Cookie: The JWT token stored as a cookie
-Response:
-200: User profile data
-401: Unauthorized access
-403: Account is locked
-4. Admin Unlock User Account
+5. API Endpoints
+  1. User Registration
+    URL: POST /api/register
+    Description: Registers a new user.
+    Request Body:
+    json:
+
+    {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "Password@123"
+    }
+  Response:
+    201: User registered successfully
+    400: Email already in use
+    422: Invalid email format or password not strong enough
+  3. User Login
+    URL: POST /api/login
+    Description: Logs in a registered user. Returns a cookie with a JWT token.
+    Request Body:
+    json
+    
+      {
+        "email": "john@example.com",
+        "password": "Password@123"
+      }
+      
+  Response:
+    200: Login successful
+    400: Invalid credentials
+    403: Account is locked, try again later
+  4. Get User Profile (Protected)
+    URL: GET /api/profile
+    Description: Returns the profile information of the logged-in user.
+    Headers:
+    Cookie: The JWT token stored as a cookie
+    Response:
+    200: User profile data
+    401: Unauthorized access
+    403: Account is locked
+5. Admin Unlock User Account
 URL: PATCH /api/admin/unlock/:userId
 Description: Admins can manually unlock a locked user account.
 Headers:
