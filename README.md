@@ -108,8 +108,13 @@ npm start
    - **200**: User profile data
    - **401**: Unauthorized access
    - **403**: Account is locked
+ 
+### 4. Logout User
+- **URL**: `GET /api/logout`
+- **Response**:
+   - **200**: User profile data
 
-### 4. Admin Unlock User Account
+### 5. Admin Unlock User Account
 - **URL**: `PATCH /api/admin/unlock`
 - **Description**: Admins can manually unlock a locked user account.
 - **Request Body**:
