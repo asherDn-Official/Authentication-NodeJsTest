@@ -19,12 +19,16 @@ const loginLimiter = rateLimit({
   standardHeaders: true, 
   legacyHeaders: false,
 });
+
 // Resister a User
 router.post("/register", register);
+
 // Login to a User Account
 router.post("/login",loginLimiter, login);
+
 // Logout a User
 router.post("/logout", logout);
+
 // access a profie data (protected) login must
 router.get("/profile", protect, getProfile);
 
