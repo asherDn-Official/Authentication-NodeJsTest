@@ -68,11 +68,6 @@ You can start the application using the following command:
 npm start
 ```
 
-Or, if you want to run it in development mode with hot reloading (requires `nodemon`):
-
-```bash
-npm run dev
-```
 
 - The server will start on `http://localhost:5000`.
 
@@ -129,12 +124,6 @@ npm run dev
   - Create a cluster and get the connection string.
   - Replace `MONGO_URI` in your `.env` file with your MongoDB Atlas URI.
 
-## Running Code
-If you've written tests for your application, you can run them with:
-
-```bash
-npm start
-```
 
 
 
