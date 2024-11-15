@@ -49,12 +49,17 @@ This project is a Node.js application implementing user authentication using JWT
     
     PORT=5000
   
-  Environment Variables Explanation:\n
-    MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).\n
-    JWT_SECRET: Secret key for signing JWT tokens. It should be a random and secure string.
-    JWT_EXPIRES_IN: Duration for which the JWT token is valid (e.g., 1d for 1 day).
-    NODE_ENV: Set to development for local development and production when deploying to production.
-    PORT: The port on which the server will run (default is 5000).
+  Environment Variables Explanation:
+  
+  MONGO_URI: The MongoDB connection URI (e.g., mongodb://localhost:27017/auth-system or your MongoDB Atlas URI).
+
+  JWT_SECRET: Secret key for signing JWT tokens. It should be a random and secure string.
+  
+  JWT_EXPIRES_IN: Duration for which the JWT token is valid (e.g., 1d for 1 day).
+  
+  NODE_ENV: Set to development for local development and production when deploying to production.
+  
+  PORT: The port on which the server will run (default is 5000).
 
 4. Run the Application
 You can start the application using the following command:
@@ -66,11 +71,16 @@ Or, if you want to run it in development mode with hot reloading (requires nodem
 The server will start on http://localhost:5000.
 
 5. API Endpoints
+
   1. User Registration
-    URL: POST /api/register
-    Description: Registers a new user.
-    Request Body:
-    json:
+
+  URL: POST /api/register
+
+  Description: Registers a new user.
+
+  Request Body:
+
+  json:
 
     {
       "name": "John Doe",
@@ -78,14 +88,22 @@ The server will start on http://localhost:5000.
       "password": "Password@123"
     }
   Response:
-    201: User registered successfully
-    400: Email already in use
-    422: Invalid email format or password not strong enough
+
+  201: User registered successfully
+
+  400: Email already in use
+
+  422: Invalid email format or password not strong enough
+
   3. User Login
-    URL: POST /api/login
-    Description: Logs in a registered user. Returns a cookie with a JWT token.
-    Request Body:
-    json
+
+  URL: POST /api/login
+
+  Description: Logs in a registered user. Returns a cookie with a JWT token.
+
+  Request Body:
+
+  json
     
       {
         "email": "john@example.com",
@@ -93,32 +111,55 @@ The server will start on http://localhost:5000.
       }
       
   Response:
-    200: Login successful
-    400: Invalid credentials
-    403: Account is locked, try again later
+
+  200: Login successful
+
+  400: Invalid credentials
+
+  403: Account is locked, try again later
+
   4. Get User Profile (Protected)
-    URL: GET /api/profile
-    Description: Returns the profile information of the logged-in user.
-    Headers:
-    Cookie: The JWT token stored as a cookie
-    Response:
-    200: User profile data
-    401: Unauthorized access
-    403: Account is locked
-5. Admin Unlock User Account
-  URL: PATCH /api/admin/unlock/:userId
-  Description: Admins can manually unlock a locked user account.
-  Headers:
-  Cookie: Admin JWT token
+
+  URL: GET /api/profile
+
+  Description: Returns the profile information of the logged-in user.
+
+  Cookie: The JWT token stored as a cookie
+
   Response:
+
+  200: User profile data
+
+  401: Unauthorized access
+
+  403: Account is locked
+
+5. Admin Unlock User Account
+
+  URL: PATCH /api/admin/unlock/:userId
+
+  Description: Admins can manually unlock a locked user account.
+
+  Cookie: Admin JWT token
+
+  Response:
+
   200: Account unlocked successfully
+
   404: User not found
+
   403: Only accessible by admin users
+
 # 6. MongoDB Database Setup
+
   If you are using a local MongoDB instance, ensure MongoDB is installed and running on your system.
+
   Run mongod to start the MongoDB server.
+
   If you are using MongoDB Atlas:
+
   Create a cluster and get the connection string.
+
   Replace MONGO_URI in your .env file with your MongoDB Atlas URI.
 
 # 7. Running Tests (Optional)
