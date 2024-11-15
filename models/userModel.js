@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["user", "admin"],
+    enum: ["user", "admin"], //only 2 roles accepted
     default: "user", // Default role is user
   },
   loginAttempts: {
@@ -41,6 +41,7 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+// Locked account check
 userSchema.methods.isLocked = function () {
   return this.locked && this.lockUntil > Date.now();
 };
