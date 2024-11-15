@@ -106,48 +106,26 @@ The server will start on http://localhost:5000.
     401: Unauthorized access
     403: Account is locked
 5. Admin Unlock User Account
-URL: PATCH /api/admin/unlock/:userId
-Description: Admins can manually unlock a locked user account.
-Headers:
-Cookie: Admin JWT token
-Response:
-200: Account unlocked successfully
-404: User not found
-403: Only accessible by admin users
-6. MongoDB Database Setup
-If you are using a local MongoDB instance, ensure MongoDB is installed and running on your system.
-Run mongod to start the MongoDB server.
-If you are using MongoDB Atlas:
-Create a cluster and get the connection string.
-Replace MONGO_URI in your .env file with your MongoDB Atlas URI.
-7. Running Tests (Optional)
+  URL: PATCH /api/admin/unlock/:userId
+  Description: Admins can manually unlock a locked user account.
+  Headers:
+  Cookie: Admin JWT token
+  Response:
+  200: Account unlocked successfully
+  404: User not found
+  403: Only accessible by admin users
+# 6. MongoDB Database Setup
+  If you are using a local MongoDB instance, ensure MongoDB is installed and running on your system.
+  Run mongod to start the MongoDB server.
+  If you are using MongoDB Atlas:
+  Create a cluster and get the connection string.
+  Replace MONGO_URI in your .env file with your MongoDB Atlas URI.
+
+# 7. Running Tests (Optional)
 If you've written tests for your application, you can run them with:
 
-bash
-Copy code
-npm test
-8. Project Structure
-bash
-Copy code
-├── controllers
-│   └── authController.js
-├── middleware
-│   ├── protect.js
-│   └── rateLimit.js
-├── models
-│   └── userModel.js
-├── routes
-│   └── authRoutes.js
-├── utils
-│   └── validators.js
-├── .env
-├── .env.example
-├── .gitignore
-├── README.md
-├── package.json
-└── server.js
-9. Rate Limiting
-The project uses express-rate-limit to prevent brute-force login attacks. The rate limit is set to allow a maximum of 5 login attempts per IP address every 15 minutes.
+    npm test
 
-10. Contribution
-Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue to discuss changes.
+# 8. Rate Limiting
+  The project uses express-rate-limit to prevent brute-force login attacks. The rate limit is set to allow a maximum of 5 login attempts per IP address every 15 minutes.
+
